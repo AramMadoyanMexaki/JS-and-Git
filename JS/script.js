@@ -15,12 +15,23 @@ function draw() {
 }
 
 function loop() {
-    requestAnimationFrame(lopp);
+    requestAnimationFrame(loop);
     draw();
 }
 
 loop();
 
 document.addEventListener("keydown", function(e) {
-    
+    if(e.keyCode === 37) {
+        data.x -= 30;
+    }
+    if(e.keyCode === 39) {
+        data.x += 30;
+    }
+    if(e.keyCode === 38) {
+        data.y -= 30;
+    }
+    if(e.keyCode === 40) {
+        data.y += 30;
+    }
 });
